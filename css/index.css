@@ -755,10 +755,11 @@ body {
 
 
 /*--------GALLERY COLOR / MAIN--------*/
-.main {
+.main, .main__byn {
     height: 100vh;
 }
-.div_gallery {
+
+.div_gallery, .div_gallery__byn {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -766,13 +767,7 @@ body {
     height: 100%;
 }
 
-@media (max-width: 800px) {
-    .div_gallery {
-        flex-flow: column;
-    }
-} 
-
-.div_gallery__izquierda, .div_gallery__derecha {
+.div_gallery__izquierda, .div_gallery__derecha, .div_gallery__izquierda__byn, .div_gallery__derecha__byn {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -781,37 +776,79 @@ body {
     gap: 10px;
 }
 
-.img_gallery {
+.img_gallery, .img_gallery__byn {
     height: auto;
     cursor: pointer;
-    transition: opacity 0.25s ease;
     width: 100%;
     max-width: 650px;
     object-fit: cover;
+    transition: opacity .25s ease, width .35s ease;
 }
 
-.vertical {
+.vertical, .vertical__byn {
     width: 65%;
     object-fit: cover;
     transition: opacity 0.25s ease;
 }
 
-.horizontal {
+.horizontal, .horizontal__byn {
     width: 90%;
     object-fit: cover;
     transition: opacity 0.25s ease;
 }
 
-.caption_gallery {
+.caption_gallery, .caption_gallery__byn {
     display: flex;
 }
 
-.img_gallery{
-   transition:
-   opacity .25s ease,
-   width .35s ease;
-}
+@media (max-width: 800px) {
 
+    .div_gallery, .div_gallery__byn {
+        flex-flow: column;
+    }
+
+    .div_gallery__izquierda,
+    .div_gallery__derecha {
+        flex: unset;
+        width: 100%;
+    }
+
+    .div_gallery__derecha {
+        display: none;
+    }
+
+    .div_gallery__derecha__byn {
+        display: none;
+    }
+
+    .div_gallery__izquierda {
+        align-items: center;
+    }
+
+    .div_gallery__izquierda__byn {
+        flex: 1;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .img_gallery {
+        width: clamp(55%, 75vw, 75%);
+        max-width: unset;
+    }
+
+    .img_gallery.vertical {
+        width: clamp(40%, 55vw, 55%);
+    }
+
+    .img_gallery__byn {
+        width: clamp(55%, 75vw, 75%);
+        max-width: unset;
+    }
+
+    .img_gallery__byn.vertical__byn {
+        width: clamp(40%, 55vw, 55%);
+    }
+}
 /*--------GALLERY COLOR / MAIN--------*/
 
 
