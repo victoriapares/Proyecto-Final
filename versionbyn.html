@@ -1,3 +1,14 @@
+<!-- ESTRUCTURA -->
+<!--
+-Header
+-About
+-Section blanco y negro
+-Back to the top
+-Footer mobile
+-->
+<!-- ESTRUCTURA -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +19,20 @@
     <script defer src="js/index.js"></script>
 </head>
 <body>
-<!--------------HEADER-------------->
+<!-- HEADER -->
 <header class="header">
 
     <nav class="nav">
         <ul class="nav__ul">
-            <li class="nav__link"><a href="index.html" class="nav__a">Pedro Parés</a></li>
-            <li class="nav__link nav__about"><a href="#" class="nav__a notselected openAbout">About</a></li>
+            <li class="nav__link"><a href="index.html" class="nav__a" title="Pedro Parés">Pedro Parés</a></li>
+            <li class="nav__link nav__about"><a href="#" class="nav__a notselected openAbout" title="About">About</a></li>
             <li class="nav__link nav__color">
-                <a href="index.html" class="nav__a notselected">Color</a>
-                <a href="#" class="nav__a">B&W</a>
+                <a href="index.html" class="nav__a notselected" title="Color">Color</a>
+                <a href="#" class="nav__a" title="B&W">B&W</a>
             </li>
             <li class="nav__link nav__group">
-                <a href="#" class="nav__a">Grid</a>
-                <a href="galeriabyn.html" class="nav__a notselected">Gallery</a>
+                <a href="#" class="nav__a" title="Grid">Grid</a>
+                <a href="galeriabyn.html" class="nav__a notselected" title="Gallery">Gallery</a>
             </li>
         </ul>
     </nav>
@@ -33,18 +44,18 @@
     <nav class="nav_small">
         <ul class="nav_small__ul">
             <li class="nav_small__link"><h1 class="h1">Pedro Parés</h1></li>
-            <li class="nav_small__link nav_small__about"><a href="#" class="nav_small__a notselected openAbout">About</a></li>
+            <li class="nav_small__link nav_small__about"><a href="#" class="nav_small__a notselected openAbout" title="Open About">About</a></li>
         </ul>
     </nav>
 
 
 </header>
-<!--------------HEADER-------------->
+<!-- HEADER -->
 
 
 
 
-<!--------------ABOUT-------------->
+<!-- ABOUT -->
     <div class="about__container">
 
         <div class="about_content">
@@ -68,9 +79,9 @@
                     </div>
                     
                     <ul class="ul_contact">
-                        <li class="li_contact"><a href="#" class="a_contact">pedropares@gmail.com</a></li>
-                        <li class="li_contact"><a href="#" class="a_contact">@thespecialpares</a></li>
-                        <li class="li_contact"><a href="#" class="a_contact">+31 654 654 876</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="email">pedropares@gmail.com</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="Instagram">@thespecialpares</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="Phone">+31 654 654 876</a></li>
                     </ul>
                 </div>
                 <div class="information_grid__experience">
@@ -98,240 +109,417 @@
         </div>
 
     </div>
-<!--------------ABOUT-------------->
+<!-- ABOUT -->
 
 
 
 
-<!--------------SECTION BLANCO Y NEGRO-------------->
+<!-- SECTION BLANCO Y NEGRO -->
 
 <div class="div__grid__byn">
+
     <div class="div_img img_1__byn img_vertical">
         <picture>
-            <img src="Media/grid_1_byn.jpg" alt="Descripción">
+            <source srcset="Media/optimizadas/grid_1_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_1_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 01"
+            >
         </picture>
         <p class="caption">( 01 )</p>
     </div>
 
     <div class="div_img img_2__byn img_horizontal">
         <picture>
-            <img src="Media/grid_2_byn.jpg" alt="Descripción">
+            <source srcset="Media/optimizadas/grid_2_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_2_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 02"
+            >
         </picture>
         <p class="caption">( 02 )</p>
     </div>
 
     <div class="div_img img_3__byn img_vertical">
         <picture>
-            <img class="img_3__byn img_vertical" src="Media/grid_3_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_3_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_3_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 03"
+            >
         </picture>
         <p class="caption">( 03 )</p>
     </div>
 
     <div class="div_img img_4__byn img_horizontal">
         <picture>
-            <img class="img_4__byn img_horizontal" src="Media/grid_4_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_4_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_4_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 04"
+            >
         </picture>
         <p class="caption">( 04 )</p>
     </div>
 
     <div class="div_img img_5__byn img_horizontal">
         <picture>
-            <img class="img_5__byn img_horizontal" src="Media/grid_5_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_5_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_5_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 05"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 05 )</p>
     </div>
 
     <div class="div_img img_6__byn img_horizontal">
         <picture>
-            <img class="img_6__byn img_horizontal" src="Media/grid_6_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_6_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_6_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 06"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 06 )</p>
     </div>
 
     <div class="div_img img_7__byn img_vertical">
         <picture>
-            <img class="img_7__byn img_vertical" src="Media/grid_7_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_7_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_7_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 07"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 07 )</p>
     </div>
 
     <div class="div_img img_8__byn img_horizontal">
         <picture>
-            <img class="img_8__byn img_horizontal" src="Media/grid_8_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_8_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_8_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 08"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 08 )</p>
     </div>
 
     <div class="div_img img_9__byn img_horizontal">
         <picture>
-            <img class="img_9__byn img_horizontal" src="Media/grid_9_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_9_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_9_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 09"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 09 )</p>
     </div>
 
     <div class="div_img img_10__byn img_horizontal">
         <picture>
-            <img class="img_10__byn img_horizontal" src="Media/grid_10_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_10_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_10_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 10"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 10 )</p>
     </div>
 
     <div class="div_img img_11__byn img_horizontal">
         <picture>
-            <img class="img_11__byn img_horizontal" src="Media/grid_11_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_11_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_11_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 11"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 11 )</p>
     </div>
 
     <div class="div_img img_12__byn img_vertical">
         <picture>
-            <img class="img_12__byn img_vertical" src="Media/grid_12_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_12_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_12_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 12"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 12 )</p>
     </div>
 
     <div class="div_img img_13__byn img_horizontal">
         <picture>
-            <img class="img_13__byn img_horizontal" src="Media/grid_13_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_13_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_13_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 13"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 13 )</p>
     </div>
 
     <div class="div_img img_14__byn img_horizontal">
         <picture>
-            <img class="img_14__byn img_horizontal" src="Media/grid_14_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_14_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_14_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 14"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 14 )</p>
     </div>
 
     <div class="div_img img_15__byn img_horizontal">
         <picture>
-            <img class="img_15__byn img_horizontal" src="Media/grid_15_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_15_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_15_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 15"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 15 )</p>
     </div>
 
     <div class="div_img img_16__byn img_horizontal">
         <picture>
-            <img class="img_16__byn img_horizontal" src="Media/grid_16_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_16_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_16_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 16"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 16 )</p>
     </div>
 
     <div class="div_img img_17__byn img_horizontal">
         <picture>
-            <img class="img_17__byn img_horizontal" src="Media/grid_17_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_17_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_17_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 17"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 17 )</p>
     </div>
 
     <div class="div_img img_18__byn img_horizontal">
         <picture>
-            <img class="img_18__byn img_horizontal" src="Media/grid_18_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_18_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_18_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 18"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 18 )</p>
     </div>
 
     <div class="div_img img_19__byn img_horizontal">
         <picture>
-            <img class="img_19__byn img_horizontal" src="Media/grid_19_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_19_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_19_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 19"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 19 )</p>
     </div>
 
     <div class="div_img img_20__byn img_horizontal">
         <picture>
-            <img class="img_20__byn img_horizontal" src="Media/grid_20_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_20_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_20_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 20"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 20 )</p>
     </div>
 
     <div class="div_img img_21__byn img_horizontal">
         <picture>
-            <img class="img_21__byn img_horizontal" src="Media/grid_21_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_21_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_21_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 21"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 21 )</p>
     </div>
 
     <div class="div_img img_22__byn img_horizontal">
         <picture>
-            <img class="img_22__byn img_horizontal" src="Media/grid_22_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_22_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_22_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 22"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 22 )</p>
     </div>
 
     <div class="div_img img_23__byn img_vertical">
         <picture>
-            <img class="img_23__byn img_vertical" src="Media/grid_23_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_23_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_23_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 23"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 23 )</p>
     </div>
 
     <div class="div_img img_24__byn img_horizontal">
         <picture>
-            <img class="img_24__byn img_horizontal" src="Media/grid_24_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_24_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_24_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 24"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 24 )</p>
     </div>
 
     <div class="div_img img_25__byn img_horizontal">
         <picture>
-            <img class="img_25__byn img_horizontal" src="Media/grid_25_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_25_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_25_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 25"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 25 )</p>
     </div>
 
     <div class="div_img img_26__byn img_horizontal">
         <picture>
-            <img class="img_26__byn img_horizontal" src="Media/grid_26_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_26_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_26_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 26"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 26 )</p>
     </div>
 
     <div class="div_img img_27__byn img_horizontal">
         <picture>
-            <img class="img_27__byn img_horizontal" src="Media/grid_27_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_27_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_27_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 27"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 27 )</p>
     </div>
 
     <div class="div_img img_28__byn img_horizontal">
         <picture>
-            <img class="img_28__byn img_horizontal" src="Media/grid_28_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_28_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_28_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 28"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 28 )</p>
     </div>
 
     <div class="div_img img_29__byn img_horizontal">
         <picture>
-            <img class="img_29__byn img_horizontal" src="Media/grid_29_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_29_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_29_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 29"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 29 )</p>
     </div>
 
     <div class="div_img img_30__byn img_horizontal">
         <picture>
-            <img class="img_30__byn img_horizontal" src="Media/grid_30_byn.jpg" alt="">
+            <source srcset="Media/optimizadas/grid_30_byn.webp" type="image/webp">
+            <img 
+                src="Media/grid_30_byn.jpg"
+                alt="Street photography image"
+                title="Photograph 30"
+                loading="lazy"
+            >
         </picture>
         <p class="caption">( 30 )</p>
     </div>
 
 
 </div>
-<!--------------SECTION BLANCO Y NEGRO-------------->
+<!-- SECTION BLANCO Y NEGRO -->
 
 
 
 
 
-<!--------------BACK TO THE TOP-------------->
+<!-- BACK TO THE TOP -->
 <div class="div_backTop">
     <ul class="ul_backTop">
         <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
         <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
         <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
         <li class="li_backTop">
-            <a href="#" id="btnTop" class="footer__a">
+            <a href="#" id="btnTop" class="footer__a" title="Back to the top Button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.83 78.14" width="24" height="40">
                     <line stroke="#000" stroke-miterlimit="10" stroke-width="3" fill="#fff" x1="22.84" y1="2.15" x2="22.84" y2="78.14"/>
                     <polyline fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3" points=".71 23.6 22.9 1.41 45.12 23.64"/>
@@ -340,26 +528,26 @@
         </li>
     </ul>
 </div>
-<!--------------BACK TO THE TOP-------------->
+<!-- BACK TO THE TOP -->
 
 
 
 
-<!--------------FOOTER-------------->
+<!-- FOOTER MOBILE -->
 <footer class="footer">
     <ul class="ul_footer">
             <li class="li_footer">
-                <a href="index.html" class="a__footer notselected">Color</a>
-                <a href="versionbyn.html" class="a_footer">B&W</a>
+                <a href="index.html" class="a__footer notselected" title="Color">Color</a>
+                <a href="versionbyn.html" class="a_footer" title="Blanco y negro">B&W</a>
             </li>
             <li class="li_footer">
-                <a href="#" class="a_footer">Grid</a>
-                <a href="galeriacolor.html" class="a_footer notselected">Gallery</a>
+                <a href="#" class="a_footer" title="Grid">Grid</a>
+                <a href="galeriacolor.html" class="a_footer notselected" title="Gallery">Gallery</a>
             </li>
     </ul>
 
 </footer>
-<!--------------FOOTER-------------->
+<!-- FOOTER MOBILE -->
 
 </body>
 </html>

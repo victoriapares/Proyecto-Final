@@ -1,4 +1,24 @@
-/*--------TIPOGRAFÍAS--------*/
+/* ESTRUCTURA */
+/*
+-Tipografías
+-Root
+-Reset CSS
+-Componentes
+-Transiciones
+-Body
+-Header
+-About
+-Section Color
+-Section Blanco y negro
+-Back to the top
+-Gallery
+-Footer
+*/
+/* ESTRUCTURA */
+
+
+
+/* TIPOGRAFÍAS */
 @font-face {
     font-family: "ABC Gaisyr Light";
     src: url("../Fuentes/ABC/ABCGaisyr-Light-Trial.woff2") format("woff2");
@@ -26,15 +46,15 @@
     font-weight: 500;
     font-style: medium;
 } 
-/*--------TIPOGRAFÍAS--------*/
+/* TIPOGRAFÍAS */
 
 
 
-/*--------ROOT--------*/
+/* ROOT */
 :root {
     /*COLORES*/
-    --text-dark: rgb(18, 18, 18);
-    --text-light: rgb(166, 166, 166);
+    --text-dark: rgb(18, 18, 18); /* Color textos */
+    --text-light: rgb(166, 166, 166); /* Color textos y enlaces */
     /*COLORES*/
 
     /*FUENTES*/
@@ -45,15 +65,15 @@
     /*FUENTES*/
 
     /*SIZES*/
-    --max-width: 964px;
-    --max-width-xl: 1440px;
+    --max-width: 60.25rem; /* Tamaño ordenador pequeño */
+    --max-width-xl: 120rem; /* Tamaño ordenador grande */
     /*SIZES*/
 }
-/*--------ROOT--------*/
+/* ROOT */
 
 
 
-/*--------RESET CSS--------*/
+/* RESET CSS */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -75,46 +95,46 @@ a {
 li {
     list-style: none;
 }
-/*--------RESET CSS--------*/
+/* RESET CSS */
 
 
 
-/*--------COMPONENTES--------*/
+/* COMPONENTES */
 h1, .h1 {
     font-weight: 350;
     font-size: clamp(18px, 2vw, 19px);
-    font-family: var(--font-family-book);
+    font-family: var(--font-family-book), serif;
 }
 
 a, .a {
     font-weight: 350;
     font-size: clamp(18px, 2vw, 19px);
-    font-family: var(--font-family-book);
+    font-family: var(--font-family-book), serif;
 }
 
 h2, .h2 {
     font-weight: 350;
     font-size: clamp(18px, 2vw, 19px);
-    font-family: var(--font-family-book);
+    font-family: var(--font-family-book), serif;
 }
 
 h3, .h3 {
     font-weight: 350;
     font-size: clamp(14px, 2vw, 15px);
-    font-family: var(--font-family-book);
+    font-family: var(--font-family-book), serif;
     color: #adacac;
 }
 
 p {
     font-weight: 350;
     font-size: clamp(14px, 2vw, 15px);
-    font-family: var(--font-family-light);
+    font-family: var(--font-family-light), serif;
 }
-/*--------COMPONENTES--------*/
+/* COMPONENTES */
 
 
-
-            /*TRANSICIÓN INICIO*/
+/* TRANSICIONES */
+            /* TRANSICIÓN INICIO */
 
 .header,
 .header_small {
@@ -136,20 +156,43 @@ p {
     filter: blur(0px);
 }
 
-            /*TRANSICIÓN INICIO*/
+            /* TRANSICIÓN INICIO */
 
 
 
-/*--------BODY--------*/
+           /* TRANSICIÓN GALERÍA */
+
+.img_gallery,
+.img_gallery__byn,
+.caption_gallery,
+.caption_gallery__byn {
+    opacity: 0;
+    transition: opacity 2.4s ease, filter 2.4s ease, transform 2.4s ease;
+}
+
+.img_gallery.is-visible,
+.img_gallery__byn.is-visible,
+.caption_gallery.is-visible,
+.caption_gallery__byn.is-visible {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+            /* TRANSICIÓN GALERÍA */
+/* TRANSICIONES */
+
+
+
+
+/* BODY */
 body {
     background: white;
 }
-/*--------BODY--------*/
+/* BODY */
 
 
 
-
-/*--------HEADER--------*/
+/* HEADER */
 .header {
     padding: 10px;
     width: 100%;
@@ -231,7 +274,7 @@ body {
     display: flex;
     flex-flow: row;
     gap: 20px;
-    padding: 40px 5px;
+    padding: 2.5rem 0.3125rem;
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
@@ -267,7 +310,7 @@ body {
 
 .nav__color {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .contact__container {
@@ -280,8 +323,8 @@ body {
     left: 0;
     display: none;
     flex-flow: row;
-    gap: 20px;
-    padding: 40px 5px;
+    gap: 1.25rem;
+    padding: 2.5rem 0.3125rem;
     z-index: 1;
 }
 
@@ -303,14 +346,13 @@ body {
 .notselected:hover {
     color: black;
 }
-/*--------HEADER--------*/
+/* HEADER */
 
 
 
 
 
-/*--------ABOUT--------*/
-
+/* ABOUT */
 .about_content{
     width: 100%;
     margin: 0;
@@ -327,7 +369,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 24px 0;
+    padding: 1.5rem 0;
 }
 
 .div_grid__big {
@@ -356,7 +398,7 @@ body {
 }
 
 .a_contact, .a_experience, .a_colaborators, .li_experience, .li_colaborators {
-    font-size: clamp(16px, 2vw, 17px);
+    font-size: clamp(1rem, 2vw, 1.0625rem);
     color:  rgb(166, 166, 166);
     transition: color 0.4s ease;
 }
@@ -374,7 +416,7 @@ body {
 .information_grid__contact, .information_grid__experience, .information_grid__colaborators {
     display: flex;
     flex-flow: column;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .ul_experience {
@@ -394,7 +436,7 @@ body {
     .about__container {
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 40px 40px 40px 10px;
+    padding: 2.5rem 2.5rem 2.5rem 0.625rem;
     }
 
     .about_grid {
@@ -409,7 +451,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    row-gap: 30px;
+    row-gap: 1.875rem;
 }
 
     .information_grid__contact {
@@ -429,16 +471,21 @@ body {
 
     .about__container {
         overflow-y: auto;
-        padding: 40px 20p 20px 10px;
+        padding: 2.5rem 1.25rem 1.25rem 0.625rem;
     }
 }
+/* ABOUT */
 
-/*--------SECTION COLOR--------*/
+
+
+
+
+/* SECTION COLOR */
 .div__grid__color {
-    padding: 100px 10px;
+    padding: 6.25rem 0.625rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
     max-width: var(--max-width-xl);
     margin: 0 auto;
     transition: filter 1s ease;; /*BLUR*/
@@ -549,7 +596,7 @@ body {
 
     .div__grid__color {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 2.5rem;
         justify-items: center;
     }
 
@@ -604,16 +651,16 @@ body {
         display: none;
     }
 }
-/*--------SECTION COLOR--------*/
+/* SECTION COLOR */
 
 
 
-/*--------SECTION BLANCO Y NEGRO--------*/
+/* SECTION BLANCO Y NEGRO */
 .div__grid__byn {
-    padding: 100px 10px;
+    padding: 6.25rem 0.625rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
     max-width: var(--max-width-xl);
     margin: 0 auto;
 
@@ -646,8 +693,8 @@ body {
 .img_14__byn { grid-column: 1; grid-row: 26 / span 2; }
 .img_15__byn { grid-column: 2; grid-row: 28 / span 2; }
 .img_16__byn { grid-column: 3; grid-row: 30 / span 2; }
-.img_17__byn { grid-column: 3; grid-row: 32 / span 2; }
-.img_18__byn { grid-column: 1; grid-row: 32 / span 2; }
+.img_17__byn { grid-column: 1; grid-row: 32 / span 2; }
+.img_18__byn { grid-column: 3; grid-row: 32 / span 2; }
 .img_19__byn { grid-column: 2; grid-row: 36 / span 2; }
 .img_20__byn { grid-column: 4; grid-row: 38 / span 2; }
 .img_21__byn { grid-column: 2; grid-row: 40 / span 2; }
@@ -666,7 +713,7 @@ body {
 
     .div__grid__byn {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 1.875rem;
         justify-items: center;
     }
 
@@ -716,22 +763,23 @@ body {
         display: none;
     }
 }
-/*--------SECTION BLANCO Y NEGRO--------*/
+/* SECTION BLANCO Y NEGRO */
 
 
 
-/*--------BACK TO THE TOP--------*/
+
+/* BACK TO THE TOP */
 .div_backTop {
     position: fixed;
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     bottom: 0;
 }
 
 .ul_backTop {
     display: flex;
     flex-flow: row;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .li_backTop {
@@ -749,12 +797,12 @@ body {
         display: none;
     }
 }
-/*--------BACK TO THE TOP--------*/
+/* BACK TO THE TOP */
 
 
 
 
-/*--------GALLERY COLOR / MAIN--------*/
+/* GALLERY */
 .main, .main__byn {
     height: 100vh;
 }
@@ -773,14 +821,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .img_gallery, .img_gallery__byn {
     height: auto;
     cursor: pointer;
     width: 100%;
-    max-width: 650px;
+    max-width: 40.625rem;
     object-fit: cover;
     transition: opacity .25s ease, width .35s ease;
 }
@@ -848,19 +896,20 @@ body {
     .img_gallery__byn.vertical__byn {
         width: clamp(40%, 55vw, 55%);
     }
+
 }
-/*--------GALLERY COLOR / MAIN--------*/
+/* GALLERY */
 
 
 
 
 
-/*--------FOOTER--------*/
+/* FOOTER */
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding: 10px;
+    padding: 0.625rem;
     width: 100%;
     display: none;
 }
@@ -868,12 +917,12 @@ body {
 .ul_footer {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .li_footer {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 @media (max-width: 800px) {
@@ -881,4 +930,4 @@ body {
         display: block;
     }
 } 
-/*--------FOOTER--------*/
+/* FOOTER */

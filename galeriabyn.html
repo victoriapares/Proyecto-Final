@@ -1,3 +1,13 @@
+<!-- ESTRUCTURA -->
+<!--
+-Header
+-About
+-Section 
+-Footer mobile
+-->
+<!-- ESTRUCTURA -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +18,20 @@
     <script defer src="js/index.js"></script>
 </head>
 <body>
-<!--------------HEADER-------------->
+<!-- HEADER -->
 <header class="header">
 
     <nav class="nav">
         <ul class="nav__ul">
-            <li class="nav__link"><a href="index.html" class="nav__a">Pedro Parés</a></li>
-            <li class="nav__link nav__about"><a href="#" class="nav__a notselected openAbout">About</a></li>
+            <li class="nav__link"><a href="index.html" class="nav__a" title="Pedro Parés">Pedro Parés</a></li>
+            <li class="nav__link nav__about"><a href="#" class="nav__a notselected openAbout" title="About">About</a></li>
             <li class="nav__link nav__color">
-                <a href="galeriacolor.html" class="nav__a notselected">Color</a>
-                <a href="#" class="nav__a">B&W</a>
+                <a href="galeriacolor.html" class="nav__a notselected" title="Color">Color</a>
+                <a href="#" class="nav__a" title="B&W">B&W</a>
             </li>
             <li class="nav__link nav__group">
-                <a href="versionbyn.html" class="nav__a notselected">Grid</a>
-                <a href="galeriabyn.html" class="nav__a">Gallery</a>
+                <a href="versionbyn.html" class="nav__a notselected" title="Grid">Grid</a>
+                <a href="galeriabyn.html" class="nav__a" title="Gallery">Gallery</a>
             </li>
         </ul>
     </nav>
@@ -33,18 +43,17 @@
     <nav class="nav_small">
         <ul class="nav_small__ul">
             <li class="nav_small__link"><h1 class="h1">Pedro Parés</h1></li>
-            <li class="nav_small__link nav_small__about"><a href="#" class="nav_small__a notselected openAbout">About</a></li>
+            <li class="nav_small__link nav_small__about"><a href="#" class="nav_small__a notselected openAbout" title="About">About</a></li>
         </ul>
     </nav>
 
-
 </header>
-<!--------------HEADER-------------->
+<!-- HEADER -->
 
 
 
 
-<!--------------ABOUT-------------->
+<!-- ABOUT -->
     <div class="about__container">
 
         <div class="about_content">
@@ -68,9 +77,9 @@
                     </div>
                     
                     <ul class="ul_contact">
-                        <li class="li_contact"><a href="#" class="a_contact">pedropares@gmail.com</a></li>
-                        <li class="li_contact"><a href="#" class="a_contact">@thespecialpares</a></li>
-                        <li class="li_contact"><a href="#" class="a_contact">+31 654 654 876</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="email">pedropares@gmail.com</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="Instagram">@thespecialpares</a></li>
+                        <li class="li_contact"><a href="#" class="a_contact" title="Phone">+31 654 654 876</a></li>
                     </ul>
                 </div>
                 <div class="information_grid__experience">
@@ -98,28 +107,38 @@
         </div>
 
     </div>
-<!--------------ABOUT-------------->
+<!-- ABOUT -->
 
 
 
 
 
 
-<!--------------SECTION-------------->
+<!-- SECTION -->
 <main class="main__byn">
 
     <div class="div_gallery__byn">
 
         <div class="div_gallery__izquierda__byn">
             <picture class="div_gallery__byn">
-                <img id="img1byn" class="img_gallery__byn vertical__byn" src="Media/grid_1_byn.jpg" alt="">
+                <source srcset="Media/optimizadas/grid_1_byn.webp" type="image/webp">
+                <img 
+                    id="img1byn" class="img_gallery__byn vertical__byn" 
+                    src="Media/grid_1_byn.jpg" 
+                    alt="Street photography image"
+                >
             </picture>
             <p id="caption1byn" class="caption_gallery__byn">( 01 )</p>
         </div>
 
         <div class="div_gallery__derecha__byn">
             <picture class="div_gallery__byn">
-                <img id="img2byn" class="img_gallery__byn horizontal__byn" src="Media/grid_2_byn.jpg" alt="">
+                <source srcset="Media/optimizadas/grid_2_byn.webp" type="image/webp">
+                <img 
+                    id="img2byn" class="img_gallery__byn horizontal__byn" 
+                    src="Media/grid_2_byn.jpg" 
+                    alt="Street photography image"
+                >
             </picture>
             <p id="caption2byn" class="caption_gallery__byn">( 02 )</p>
         </div>
@@ -127,6 +146,27 @@
     </div>
 
 </main>
-<!--------------SECTION-------------->
+<!-- SECTION -->
+
+
+
+
+
+
+<!-- FOOTER MOBILE -->
+<footer class="footer">
+    <ul class="ul_footer">
+            <li class="li_footer">
+                <a href="galeriacolor.html" class="a__footer notselected">Color</a>
+                <a href="#" class="a_footer">B&W</a>
+            </li>
+            <li class="li_footer">
+                <a href="index.html" class="a_footer notselected">Grid</a>
+                <a href="#" class="a_footer">Gallery</a>
+            </li>
+    </ul>
+
+</footer>
+<!-- FOOTER MOBILE-->
 </body>
 </html>
