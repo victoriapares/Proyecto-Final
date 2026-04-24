@@ -239,12 +239,7 @@ let imagenes = [
   { src: "Media/grid_22_color.jpg", webp: "Media/optimizadas/grid_22_color.webp", numero: "22" },
   { src: "Media/grid_23_color.jpg", webp: "Media/optimizadas/grid_23_color.webp", numero: "23" },
   { src: "Media/grid_24_color.jpg", webp: "Media/optimizadas/grid_24_color.webp", numero: "24" },
-  { src: "Media/grid_25_color.jpg", webp: "Media/optimizadas/grid_25_color.webp", numero: "25" },
-  { src: "Media/grid_26_color.jpg", webp: "Media/optimizadas/grid_26_color.webp", numero: "26" },
-  { src: "Media/grid_27_color.jpg", webp: "Media/optimizadas/grid_27_color.webp", numero: "27" },
-  { src: "Media/grid_28_color.jpg", webp: "Media/optimizadas/grid_28_color.webp", numero: "28" },
-  { src: "Media/grid_29_color.jpg", webp: "Media/optimizadas/grid_29_color.webp", numero: "29" },
-  { src: "Media/grid_30_color.jpg", webp: "Media/optimizadas/grid_30_color.webp", numero: "30" },
+  { src: "Media/grid_25_color.jpg", webp: "Media/optimizadas/grid_25_color.webp", numero: "25" }
 ];
 
 let indexIzquierda = 0;
@@ -306,12 +301,7 @@ let imagenesByn = [
   { src: "Media/grid_22_byn.jpg", webp: "Media/optimizadas/grid_22_byn.webp", numero: "22" },
   { src: "Media/grid_23_byn.jpg", webp: "Media/optimizadas/grid_23_byn.webp", numero: "23" },
   { src: "Media/grid_24_byn.jpg", webp: "Media/optimizadas/grid_24_byn.webp", numero: "24" },
-  { src: "Media/grid_25_byn.jpg", webp: "Media/optimizadas/grid_25_byn.webp", numero: "25" },
-  { src: "Media/grid_26_byn.jpg", webp: "Media/optimizadas/grid_26_byn.webp", numero: "26" },
-  { src: "Media/grid_27_byn.jpg", webp: "Media/optimizadas/grid_27_byn.webp", numero: "27" },
-  { src: "Media/grid_28_byn.jpg", webp: "Media/optimizadas/grid_28_byn.webp", numero: "28" },
-  { src: "Media/grid_29_byn.jpg", webp: "Media/optimizadas/grid_29_byn.webp", numero: "29" },
-  { src: "Media/grid_30_byn.jpg", webp: "Media/optimizadas/grid_30_byn.webp", numero: "30" },
+  { src: "Media/grid_25_byn.jpg", webp: "Media/optimizadas/grid_25_byn.webp", numero: "25" }
 ];
 
 let indexIzquierdaByn = 0;
