@@ -53,7 +53,7 @@
 :root {
     /*COLORES*/
     --text-dark: rgb(18, 18, 18); /* Color textos */
-    --text-light: rgb(166, 166, 166); /* Color textos y enlaces */
+    --text-light: rgb(152, 152, 152); /* Color textos y enlaces */
 
     /*FUENTES*/
     --font-family-light: 'ABC Gaisyr Light';
@@ -435,7 +435,7 @@ body {
 
 .img_24__color { grid-column: 3; grid-row: 44 / span 2; }
 
-.img_25__color { grid-column: 1; grid-row: 48 / span 2; }
+.img_25__color { grid-column: 1; grid-row: 47 / span 2; }
 
 
 .div_img {
