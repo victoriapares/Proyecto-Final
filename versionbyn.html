@@ -14,13 +14,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Portfolio</title>
+    <title>Pedro Portfolio - Versión byn</title>
     <meta name="description" content="Photographic archive of street photography showing real urban life and city scenes.">
     <link rel="preload" href="ABC/ABCGaisyr.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/index.js"></script>
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-arrow-up" viewBox="0 0 45.83 78.14">
+            <line stroke="#000" stroke-miterlimit="10" stroke-width="3" fill="#fff" x1="22.84" y1="2.15" x2="22.84" y2="78.14"/>
+            <polyline fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3" points=".71 23.6 22.9 1.41 45.12 23.64"/>
+        </symbol>
+    </svg>
 <!-- HEADER -->
 <header class="header">
 
@@ -41,7 +47,7 @@
 
 </header>
 
-<header class="header_small">
+<div class="header_small">
 
     <nav class="nav_small">
         <ul class="nav_small__ul">
@@ -51,7 +57,7 @@
     </nav>
 
 
-</header>
+</div>
 <!-- HEADER -->
 
 
@@ -81,8 +87,8 @@
                     </div>
                     
                     <ul class="ul_contact">
-                        <li class="li_contact"><a href="#" class="a_contact" title="email">pedropares@gmail.com</a></li>
-                        <li class="li_contact"><a href="#" class="a_contact" title="Instagram">@thespecialpares</a></li>
+                        <li class="li_contact"><a href="mailto:pedroapares@gmail.com" class="a_contact" title="email">pedroapares@gmail.com</a></li>
+                        <li class="li_contact"><a href="https://instagram.com/thespecialpares" class="a_contact" title="Instagram" target="_blank" rel="noreferrer">@thespecialpares</a></li>
                         <li class="li_contact"><a href="#" class="a_contact" title="Phone">+31 654 654 876</a></li>
                     </ul>
                 </div>
@@ -451,14 +457,13 @@
 <!-- BACK TO THE TOP -->
 <div class="div_backTop">
     <ul class="ul_backTop">
-        <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
-        <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
-        <li class="li_backTop"><a href="#" class="a_backTop"></a></li>
+        <li class="li_backTop"></li>
+        <li class="li_backTop"></li>
+        <li class="li_backTop"></li>
         <li class="li_backTop">
             <a href="#" id="btnTop" class="footer__a" title="Back to the top Button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.83 78.14" width="24" height="40">
-                    <line stroke="#000" stroke-miterlimit="10" stroke-width="3" fill="#fff" x1="22.84" y1="2.15" x2="22.84" y2="78.14"/>
-                    <polyline fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3" points=".71 23.6 22.9 1.41 45.12 23.64"/>
+                <svg width="24" height="40">
+                    <use href="#icon-arrow-up"/>
                 </svg>
             </a>
         </li>

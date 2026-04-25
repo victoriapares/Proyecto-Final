@@ -34,39 +34,20 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: "ABC Gaisyr Regular";
-    src: url("../Fuentes/ABC/ABCGaisyr-Regular-Trial.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-} 
-
-@font-face {
-    font-family: "ABC Gaisyr Medium";
-    src: url("../Fuentes/ABC/ABCGaisyr-Medium-Trial.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-} 
-
-
-
 
 /* ROOT */
 :root {
     /*COLORES*/
     --text-dark: rgb(18, 18, 18); /* Color textos */
     --text-light: rgb(152, 152, 152); /* Color textos y enlaces */
+    --background-about: rgba(255, 255, 255, 0.60);
+    --background-body: white; 
 
     /*FUENTES*/
     --font-family-light: 'ABC Gaisyr Light';
     --font-family-book: 'ABC Gaisyr Book';
-    --font-family-regular: 'ABC Gaisyr Regular';
-    --font-family-medium: 'ABC Gaisyr Medium';
 
     /*SIZES*/
-    --max-width: 60.25rem; 
     --max-width-xl: 120rem; 
 }
 
@@ -104,20 +85,20 @@ h1, .h1,
 h2, .h2,
 a, .a {
     font-weight: 350;
-    font-size: clamp(18px, 2vw, 19px);
+    font-size: clamp(1.125rem, 2vw, 1.1875rem);
     font-family: var(--font-family-book), serif;
 }
 
 h3, .h3 {
     font-weight: 350;
-    font-size: clamp(14px, 2vw, 15px);
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
     font-family: var(--font-family-book), serif;
     color: var(--text-light);
 }
 
 p {
     font-weight: 350;
-    font-size: clamp(14px, 2vw, 15px);
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
     font-family: var(--font-family-light), serif;
 }
 
@@ -174,7 +155,7 @@ p {
 
 /* BODY */
 body {
-    background: white;
+    background: var(--background-body);
 }
 
 
@@ -182,16 +163,16 @@ body {
 
 /* HEADER */
 .header {
-    padding: 10px;
+    padding: 0.625rem;
     width: 100%;
     position: fixed;
-    z-index: 10000;
+    z-index: 100;
 }
 
 .nav__ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
     text-align: left;
 }
 
@@ -208,44 +189,39 @@ body {
 
 .nav__group {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .nav__about {
     position: relative;
-    z-index: 10001;
+    z-index: 100;
 }
 
 .header_small {
-    padding: 10px;
+    padding: 0.625rem;
     width: 100%;
     position: fixed;
     display: none;
-    z-index: 10000;
+    z-index: 100;
 }
 
 .nav_small__ul {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-}
-
-#openAboutDesktop, #openAboutMobile {
-    position: relative;
-    z-index: 10001;
+    gap: 0.625rem;
 }
 
 .about__container {
     position: fixed;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.60);
+    background-color: var(--background-about);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     display: flex;
     flex-flow: row;
-    gap: 20px;
+    gap: 1.25rem;
     padding: 2.5rem 0.3125rem;
-    z-index: 9999;
+    z-index: 90;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -256,26 +232,6 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-}
-
-.about__container.deactive {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-.nav__contact {
-    z-index: 2;
 }
 
 .nav__color {
@@ -289,6 +245,10 @@ body {
 }
 
 .notselected:hover {
+    color: var(--text-dark);
+}
+
+.notselected:active {
     color: var(--text-dark);
 }
 
@@ -336,7 +296,7 @@ body {
 }
 
 .p_about {
-    font-size: clamp(18px, 2vw, 19px);
+    font-size: clamp(1.125rem, 2vw, 1.1875rem);
 }
 
 .a_contact, .a_experience, .a_colaborators, .li_experience, .li_colaborators {
@@ -346,6 +306,10 @@ body {
 }
 
 .a_contact:hover {
+    color: var(--text-dark);
+}
+
+.a_contact:active {
     color: var(--text-dark);
 }
 
@@ -360,7 +324,7 @@ body {
 .ul_colaborators {
     display: flex;
     flex-flow: column;
-    gap: 5px;
+    gap: 0.3125rem;
 }
 
 
@@ -445,7 +409,7 @@ body {
 .div_img {
     display: flex;
     flex-flow: column nowrap;
-    gap: 5px;
+    gap: 0.3125rem;
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -534,7 +498,7 @@ body {
 .li_backTop {
     display: flex;
     flex-flow: row;
-    flex: 1 1 300px;
+    flex: 1 1 18.75rem;
 }
 
 #btnTop {

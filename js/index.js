@@ -1,3 +1,4 @@
+(function() {
 /* ESTRUCTURA */
 /*
 -Abrir/cerrar About
@@ -14,14 +15,13 @@
 /* ESTRUCTURA */
 
 
-/* ABRIR/CERRAR ABOUT - Abre un cierra el about con un Toggle */
+/* ABRIR/CERRAR ABOUT - Abre y cierra el about con un Toggle */
+
+/* Variables */
 let aboutContainer = document.querySelector(".about__container");
 
-document.querySelectorAll(".openAbout").forEach(btn => {
-  btn.addEventListener("click", toggleAbout);
-});
-
-function toggleAbout(e) {
+/* Funciones */
+function toggleAboutHandler(e) {
   e.preventDefault();
 
   let grid = document.querySelector(".div__grid__color");
@@ -40,16 +40,22 @@ function toggleAbout(e) {
     aboutBtn.classList.remove("notselected");   
   }
 }
-/* ABRIR/CERRAR ABOUT */
+
+/* Asignaciones */
+document.querySelectorAll(".openAbout").forEach(btn => {
+  btn.addEventListener("click", toggleAboutHandler);
+});
 
 
 
 
-/* BOTÓN BACK TO THE TOP - Detecta el scroll y genera botón para subir arriba*/
+/* BOTÓN BACK TO THE TOP - Detecta el scroll y genera botón para subir arriba */
+
+/* Variables */
 let btn = document.getElementById("btnTop");
 
+/* Asignaciones */
 if (btn) {
-
   window.onscroll = function () {
     if (document.documentElement.scrollTop > 1000) {
       btn.style.display = "block";
@@ -65,22 +71,20 @@ if (btn) {
     });
   };
 }
-/* BOTÓN BACK TO THE TOP */
 
 
 
+/* GRID FOTOS (COLOR) - Aplica un efecto de desvanecimiento cuando la imagen llega a cierta parte de la pantalla */
 
-/* GRID FOTOS (COLOR) -  Aplica un efecto de desvanecimiento cuando la imagen llega a cierta parte de la pantalla*/
+/* Variables */
 let images = document.querySelectorAll(".div__grid__color img");
 
+/* Asignaciones */
 window.addEventListener("scroll", () => {
   images.forEach((img) => {
     let rect = img.getBoundingClientRect();
-
     let startOffset = 150; 
-
     let opacity = Math.min(Math.max((-rect.top + startOffset) / img.offsetHeight, 0), 1);
-
     img.style.opacity = 1 - opacity;
   });
 });
@@ -89,73 +93,70 @@ window.addEventListener("scroll", () => {
 
 
 
-/* GRID FOTOS (ANIMACIÓN) - Animación de imágenes al cargar*/ 
+/* GRID FOTOS (ANIMACIÓN) - Animación de imágenes al cargar */
+
+/* Constantes */
+const LIMIT = 4;
+
+/* Variables */
+let header = document.querySelector(".header");
+let headerSmall = document.querySelector(".header_small");
+let gridImages = document.querySelectorAll(".div_img");
+
+/* Asignaciones */
 window.addEventListener("DOMContentLoaded", () => {
-  let header = document.querySelector(".header");
-  let headerSmall = document.querySelector(".header_small");
-  
 
-  let images = document.querySelectorAll(".div_img");
-
-  // Header
   setTimeout(() => {
     header?.classList.add("is-visible");
     headerSmall?.classList.add("is-visible");
   }, 200);
 
-  // Imágenes
-  const LIMIT = 4;
-
-  images.forEach((img, index) => {
+  gridImages.forEach((img, index) => {
     const delay = index < LIMIT
       ? 800 + index * 200
       : 2000 + (index - LIMIT) * 150;
-
     setTimeout(() => {
       img.classList.add("is-visible");
     }, delay);
   });
 });
-/* GRID FOTOS (ANIMACIÓN) */
+
 
 
 
 
 /* GRID FOTOS (BLANCO Y NEGRO) - Animación de fotos al hacer scroll */
 
+/* Variables */
 let imagesbyn = document.querySelectorAll(".div__grid__byn img");
 
+/* Asignaciones */
 window.addEventListener("scroll", () => {
   imagesbyn.forEach((img) => {
     let rect = img.getBoundingClientRect();
-
     let startOffset = 150; 
-
     let opacity = Math.min(Math.max((-rect.top + startOffset) / img.offsetHeight, 0), 1);
-
     img.style.opacity = 1 - opacity;
   });
 });
-/* GRID FOTOS (BLANCO Y NEGRO) */
-
 
 
 
 
 /* GRID FOTOS (CAPTIONS) - Animación de captions al hacer scroll */
+
+/* Variables */
 let texto = document.querySelectorAll(".caption");
 
+/* Asignaciones */
 window.addEventListener("scroll", () => {
   texto.forEach((p) => {
     let rect = p.getBoundingClientRect();
-
     let startOffset = 200;
-
     let progress = Math.min(
       Math.max((-rect.top + startOffset) / p.offsetHeight, 0),
       1
     );
-
     if (progress > 0.5) {
       p.classList.add("hidden");
     } else {
@@ -163,13 +164,12 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-/* GRID FOTOS (CAPTIONS) */
 
 
 
 /* GALERÍA FOTOS - Cambio de fotos al hacer click */
 
-              /* FUNCIONES COMPARTIDAS */
+/* Funciones compartidas */
 function cambiarImagen(img, nuevoSrc, nuevoWebp, callback) {
   img.style.transition = "opacity 0.2s ease";
   img.style.opacity = 0;
@@ -208,13 +208,11 @@ function ajustarTamañoByn(img) {
     img.classList.remove("horizontal__byn");
   }
 }
-              /* FUNCIONES COMPARTIDAS */
-
 
 
 
 /* GALERÍA FOTOS (COLOR) - Array de fotos (en webp) que se cambian al hacer click*/
-let imagenes = [
+const imagenes = [
   { src: "Media/grid_1_color.jpg", webp: "Media/optimizadas/grid_1_color.webp", numero: "01" },
   { src: "Media/grid_2_color.jpg", webp: "Media/optimizadas/grid_2_color.webp", numero: "02" },
   { src: "Media/grid_3_color.jpg", webp: "Media/optimizadas/grid_3_color.webp", numero: "03" },
@@ -242,6 +240,7 @@ let imagenes = [
   { src: "Media/grid_25_color.jpg", webp: "Media/optimizadas/grid_25_color.webp", numero: "25" }
 ];
 
+/* Variables */
 let indexIzquierda = 0;
 let indexDerecha = imagenes.length - 1;
 
@@ -251,6 +250,7 @@ let img2 = document.getElementById("img2");
 let caption1 = document.querySelector(".div_gallery__izquierda .caption_gallery");
 let caption2 = document.querySelector(".div_gallery__derecha .caption_gallery");
 
+/* Asignaciones */
 if (img1 && img2) {
   caption1.textContent = `( ${imagenes[indexIzquierda].numero} )`;
   caption2.textContent = `( ${imagenes[indexDerecha].numero} )`;
@@ -276,7 +276,7 @@ if (img1 && img2) {
 
 
 /* GALERÍA FOTOS (BLANCO Y NEGRO) - Array de fotos que se cambian al hacer click */
-let imagenesByn = [
+const imagenesByn = [
   { src: "Media/grid_1_byn.jpg", webp: "Media/optimizadas/grid_1_byn.webp", numero: "01" },
   { src: "Media/grid_2_byn.jpg", webp: "Media/optimizadas/grid_2_byn.webp", numero: "02" },
   { src: "Media/grid_3_byn.jpg", webp: "Media/optimizadas/grid_3_byn.webp", numero: "03" },
@@ -304,6 +304,7 @@ let imagenesByn = [
   { src: "Media/grid_25_byn.jpg", webp: "Media/optimizadas/grid_25_byn.webp", numero: "25" }
 ];
 
+/* Variables */
 let indexIzquierdaByn = 0;
 let indexDerechaByn = imagenesByn.length - 1;
 
@@ -313,6 +314,7 @@ let img2byn = document.getElementById("img2byn");
 let caption1byn = document.getElementById("caption1byn");
 let caption2byn = document.getElementById("caption2byn");
 
+/* Asignaciones */
 if (img1byn && img2byn) {
   caption1byn.textContent = `( ${imagenesByn[indexIzquierdaByn].numero} )`;
   caption2byn.textContent = `( ${imagenesByn[indexDerechaByn].numero} )`;
@@ -332,8 +334,6 @@ if (img1byn && img2byn) {
     caption2byn.textContent = `( ${imagenesByn[indexDerechaByn].numero} )`;
   });
 }
-/* GALERÍA FOTOS (BLANCO Y NEGRO) */
-
 
 
 
@@ -347,7 +347,7 @@ window.addEventListener("DOMContentLoaded", () => {
     headerSmall?.classList.add("is-visible");
   }, 200);
 
-      /* GRID  */
+  /* Grid  */
   let gridImgs = document.querySelectorAll(".div_img");
   const LIMIT = 4;
   gridImgs.forEach((img, index) => {
@@ -356,10 +356,8 @@ window.addEventListener("DOMContentLoaded", () => {
       : 2000 + (index - LIMIT) * 150;
     setTimeout(() => img.classList.add("is-visible"), delay);
   });
-      /* GRID  */
-
-
-      /* GALERÍA  */
+      
+  /* Galería  */
   let galleryImgs = document.querySelectorAll(".img_gallery, .img_gallery__byn");
   let galleryCaptions = document.querySelectorAll(".caption_gallery, .caption_gallery__byn");
 
@@ -376,5 +374,5 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => el.classList.add("is-visible"), 700 + i * 500);
   });
 });
-      /* GALERÍA  */
-/* GRID FOTOS (ANIMACIÓN) */
+      
+})();
