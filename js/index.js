@@ -1,21 +1,6 @@
 (function() {
-/* ESTRUCTURA */
-/*
--Abrir/cerrar About
--Botón Back to the top
--Grid fotos (Color)
--Grid fotos (Animación)
--Grid fotos (Blanco y negro)
--Grid fotos (Captions)
--Galería fotos
--Galería fotos (Color)
--Galería fotos (Blanco y negro)
--Grid fotos (Animación)
-*/
-/* ESTRUCTURA */
 
-
-/* ABRIR/CERRAR ABOUT - Abre y cierra el about con un Toggle */
+/* ABRIR/CERRAR ABOUT - Abre y cierra el about con un Toggle y que se difuminen fotos del fondo */
 
 /* Variables */
 let aboutContainer = document.querySelector(".about__container");
@@ -88,7 +73,7 @@ window.addEventListener("scroll", () => {
     img.style.opacity = 1 - opacity;
   });
 });
-/* GRID FOTOS (COLOR) */
+
 
 
 

@@ -1,22 +1,3 @@
-/* ESTRUCTURA */
-/*
--Tipografías
--Root
--Reset CSS
--Componentes
--Transiciones
--Body
--Header
--About
--Section Color
--Section Blanco y negro
--Back to the top
--Gallery
--Footer
--Media Querys
-*/
-
-
 /* TIPOGRAFÍAS */
 @font-face {
     font-family: "ABC Gaisyr Light";
@@ -39,9 +20,9 @@
 :root {
     /*COLORES*/
     --text-dark: rgb(18, 18, 18); /* Color textos */
-    --text-light: rgb(152, 152, 152); /* Color textos y enlaces */
-    --background-about: rgba(255, 255, 255, 0.60);
-    --background-body: white; 
+    --text-light: rgb(150, 150, 150); /* Color textos y enlaces */
+    --background-about: rgba(255, 255, 255, 0.60); /* Color fondo About */
+    --background-body: white; /* Color fondo */
 
     /*FUENTES*/
     --font-family-light: 'ABC Gaisyr Light';
