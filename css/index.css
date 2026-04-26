@@ -752,14 +752,14 @@ body {
     .horizontal,
     .img_gallery__byn,
     .horizontal__byn {
-        width: clamp(75%, 75vw, 85%);
+        width: clamp(90%, 75vw, 95%);
         max-width: unset;
     }
 
   
     .vertical,
     .vertical__byn {
-        width: clamp(52%, 75vw, 58%);
+        width: clamp(60%, 75vw, 62%);
         max-width: unset;
     }
 
