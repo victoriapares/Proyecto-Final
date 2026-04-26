@@ -53,10 +53,11 @@
 /* ROOT */
 :root {
     /*COLORES*/
-    --text-dark: rgb(18, 18, 18); /* Color textos */
+    --text-dark: #000000; /* Color textos */
     --text-light: #767676; /* Color textos y enlaces */
+    --text-hover: #c1c1c1; /* Color hover de textos */
     --background-about: rgba(255, 255, 255, 0.60); /* Color fondo About */
-    --background-body: white; /* Color fondo */
+    --background-body: #ffffff; /* Color fondo */
 
     /*FUENTES*/
     --font-family-light: 'ABC Gaisyr Light';
@@ -266,13 +267,13 @@ body {
 }
 
 .notselected {
-    font-family: var(--font-family-book);
+
     color: var(--text-light);
     transition: color 0.4s ease;
 }
 
 .notselected:hover {
-    color: var(--text-dark);
+    color: #c1c1c1;
 }
 
 .notselected:active {
@@ -745,17 +746,21 @@ body {
         align-items: center;
     }
 
+   
+
     .img_gallery,
-    .img_gallery__byn {
-        width: clamp(55%, 75vw, 75%);
+    .horizontal,
+    .img_gallery__byn,
+    .horizontal__byn {
+        width: clamp(75%, 75vw, 85%);
         max-width: unset;
     }
 
-    .img_gallery,
+  
     .vertical,
-    .img_gallery__byn,
     .vertical__byn {
-        width: clamp(40%, 55vw, 55%);
+        width: clamp(52%, 75vw, 58%);
+        max-width: unset;
     }
 
     .div_gallery__izquierda__byn {
