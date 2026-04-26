@@ -759,7 +759,7 @@ body {
   
     .vertical,
     .vertical__byn {
-        width: clamp(60%, 75vw, 62%);
+        width: clamp(55%, 75vw, 59%);
         max-width: unset;
     }
 
