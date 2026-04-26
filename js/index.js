@@ -1,5 +1,20 @@
 (function() {
 
+/*
+    PEDRO PARÉS - PORTFOLIO
+
+    Bloques:
+    - Abrir/Cerrar About: Toggle del panel de información con efecto blur
+    - Botón Back to Top: Detecta scroll y muestra botón para volver arriba
+    - Grid Fotos Color: Efecto de desvanecimiento al hacer scroll en el grid de color
+    - Grid Fotos B&W: Efecto de desvanecimiento al hacer scroll en el grid B&W
+    - Grid Fotos Captions: Animación de captions al hacer scroll
+    - Galería Fotos: Cambio de imagen y ajuste de tamaño
+    - Galería Color: Array de fotos en color con navegación al hacer click
+    - Galería B&W: Array de fotos en B&W con navegación al hacer click
+    - Animación Carga: Animación del header, grid y galería al cargar la página
+*/
+
 /* ABRIR/CERRAR ABOUT - Abre y cierra el about con un Toggle y que se difuminen fotos del fondo */
 
 /* Variables */

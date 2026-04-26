@@ -10,7 +10,13 @@
     <link rel="icon" href="Media/favicon.png" type="image/png">
     <script defer src="js/index.js"></script>
 </head>
+
 <body>
+<!--
+    PEDRO PARÉS - PORTFOLIO
+    Página principal con grid de fotografías en color.
+    Secciones: Header, About, Grid Color, Back to Top, Footer Mobile
+-->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
         <symbol id="icon-arrow-up" viewBox="0 0 45.83 78.14">
             <line stroke="#000" stroke-miterlimit="10" stroke-width="3" fill="#fff" x1="22.84" y1="2.15" x2="22.84" y2="78.14"/>
@@ -29,11 +35,11 @@
                     </a>
                 </li>
                 <li class="nav__link nav__color">
-                    <a href="#" class="nav__a" title="Color">Color</a>
+                    <span class="nav__a a" title="Color">Color</span>
                     <a href="versionbyn.html" class="nav__a notselected" title="B&W">B&W</a>
                 </li>
                 <li class="nav__link nav__group">
-                    <a href="#" class="nav__a" title="Open Grid section">Grid</a>
+                    <span class="nav__a a" title="Grid section">Grid</span>
                     <a href="galeriacolor.html" class="nav__a notselected" title="Go to Gallery page">Gallery</a>
                 </li>
             </ul>
@@ -88,7 +94,7 @@
                         <ul class="ul_contact">
                             <li class="li_contact"><a href="mailto:pedroapares@gmail.com" class="a_contact" title="Email">pedroapares@gmail.com</a></li>
                             <li class="li_contact"><a href="https://instagram.com/thespecialpares" class="a_contact" title="Instagram" target="_blank" rel="noreferrer">@thespecialpares</a></li>
-                            <li class="li_contact"><a href="#" class="a_contact" title="Phone">+31 654 654 876</a></li>
+                            <li class="li_contact"><a href="tel:+31654654876" class="a_contact" title="Phone">+31 654 654 876</a></li>
                         </ul>
                     </div>
                     <div class="information_grid__experience">
@@ -129,6 +135,7 @@
                     src="Media/grid_1_color.jpg"
                     alt="Street photography image"
                     title="Photograph 01"
+                    fetchpriority="high"
                 >
             </picture>
             <p class="caption">( 01 )</p>
@@ -142,7 +149,6 @@
                     alt="Street photography image"
                     title="Photograph 02"
                     fetchpriority="high"
-                    loading="eager"
                 >
             </picture>
             <p class="caption">( 02 )</p>
@@ -155,6 +161,7 @@
                     src="Media/grid_3_color.jpg"
                     alt="Street photography image"
                     title="Photograph 03"
+                    fetchpriority="high"
                 >
             </picture>
             <p class="caption">( 03 )</p>
@@ -167,6 +174,7 @@
                     src="Media/grid_4_color.jpg"
                     alt="Street photography image"
                     title="Photograph 04"
+                    fetchpriority="high"
                 >
             </picture>
             <p class="caption">( 04 )</p>
@@ -475,11 +483,11 @@
     <footer class="footer">
         <ul class="ul_footer">
                 <li class="li_footer">
-                    <a href="#" class="a__footer" title="Color">Color</a>
+                    <span class="a__footer a" title="Color">Color</span>
                     <a href="versionbyn.html" class="a_footer notselected" title="Blanco y negro">B&W</a>
                 </li>
                 <li class="li_footer">
-                    <a href="#" class="a_footer" title="Grid">Grid</a>
+                    <span class="a__footer a" title="Grid">Grid</span>
                     <a href="galeriacolor.html" class="a_footer notselected" title="Gallery">Gallery</a>
                 </li>
         </ul>

@@ -1,3 +1,25 @@
+/*
+    PEDRO PARÉS - PORTFOLIO
+    
+    Bloques:
+    - Tipografías: Fuentes ABC Gaisyr Light y Book
+    - Root: Variables de colores, fuentes y tamaños
+    - Reset CSS: Normalización de estilos
+    - Componentes: Headings, párrafos y enlaces
+    - Transiciones: Animaciones de entrada y galería
+    - Body: Fondo general
+    - Accesibilidad: Clase sr-only
+    - Header: Navegación principal y móvil
+    - About: Panel de información y contacto
+    - Section Color: Grid de fotografías en color
+    - Section B&W: Grid de fotografías en blanco y negro
+    - Back to Top: Botón de scroll al inicio
+    - Gallery: Galería de fotos
+    - Media Mobile: Responsive para pantallas menores de 800px
+    - Footer: Navegación móvil inferior
+*/
+
+
 /* TIPOGRAFÍAS */
 @font-face {
     font-family: "ABC Gaisyr Light";
@@ -137,6 +159,16 @@ p {
 /* BODY */
 body {
     background: var(--background-body);
+}
+
+/* ACCESIBILIDAD */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
 
@@ -280,7 +312,7 @@ body {
     font-size: clamp(1.125rem, 2vw, 1.1875rem);
 }
 
-.a_contact, .a_experience, .a_colaborators, .li_experience, .li_colaborators {
+.a_contact, .li_experience, .li_colaborators {
     font-size: clamp(1rem, 2vw, 1.0625rem);
     color: var(--text-light);
     transition: color 0.4s ease;
@@ -331,7 +363,6 @@ body {
     height: auto;
     object-fit: cover;
     display: block;
-    top: 0;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -492,6 +523,7 @@ body {
 /* GALLERY */
 .main, .main__byn {
     height: 100vh;
+    padding-top: 3rem;
 }
 
 .div_gallery, .div_gallery__byn {
@@ -521,19 +553,29 @@ body {
 }
 
 .vertical, .vertical__byn {
-    width: 65%;
+    width: 60%;
     object-fit: cover;
     transition: opacity 0.25s ease;
 }
 
 .horizontal, .horizontal__byn {
-    width: 90%;
+    width: 75%;
     object-fit: cover;
     transition: opacity 0.25s ease;
 }
 
 .caption_gallery, .caption_gallery__byn {
     display: flex;
+}
+
+.btn-gallery {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: block;
+    width: 100%;
 }
 
 
@@ -622,15 +664,9 @@ body {
 
 
     /* SECTION COLOR + BLANCO Y NEGRO */
-    .div__grid__color {
+    .div__grid__color, .div__grid__byn {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-        justify-items: center;
-    }
-
-    .div__grid__byn {
-        grid-template-columns: 1fr;
-        gap: 1.875rem;
         justify-items: center;
     }
 
@@ -691,6 +727,7 @@ body {
         flex: 1;
         height: 100%;
         justify-content: center;
+        align-items: center;
     }
 
     .img_gallery,
@@ -705,6 +742,15 @@ body {
     .vertical__byn {
         width: clamp(40%, 55vw, 55%);
     }
+
+    .div_gallery__izquierda__byn {
+        flex: unset;
+        height: auto;       
+        justify-content: center;  
+        align-items: center;
+        gap: 0.625rem;     
+    }
+
 
 
 
