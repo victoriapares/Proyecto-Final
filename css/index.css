@@ -35,6 +35,18 @@
     font-weight: 350;
     font-style: normal;
     font-display: swap;
+
+
+}
+
+@font-face {
+    font-family: "ABC Gaisyr Regular";
+    src: url("../Fuentes/ABC/ABCGaisyr-Regular-Trial.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+
 }
 
 
@@ -42,13 +54,14 @@
 :root {
     /*COLORES*/
     --text-dark: rgb(18, 18, 18); /* Color textos */
-    --text-light: rgb(150, 150, 150); /* Color textos y enlaces */
+    --text-light: #767676; /* Color textos y enlaces */
     --background-about: rgba(255, 255, 255, 0.60); /* Color fondo About */
     --background-body: white; /* Color fondo */
 
     /*FUENTES*/
     --font-family-light: 'ABC Gaisyr Light';
     --font-family-book: 'ABC Gaisyr Book';
+    --font-family-Regular: 'ABC Gaisyr Regular';
 
     /*SIZES*/
     --max-width-xl: 120rem; 
@@ -89,7 +102,7 @@ h2, .h2,
 a, .a {
     font-weight: 350;
     font-size: clamp(1.125rem, 2vw, 1.1875rem);
-    font-family: var(--font-family-book), serif;
+    font-family: var(--font-family-Regular), serif;
 }
 
 h3, .h3 {
@@ -253,6 +266,7 @@ body {
 }
 
 .notselected {
+    font-family: var(--font-family-book);
     color: var(--text-light);
     transition: color 0.4s ease;
 }
@@ -263,6 +277,7 @@ body {
 
 .notselected:active {
     color: var(--text-dark);
+    font-family: var(--font-family-Regular);
 }
 
 
